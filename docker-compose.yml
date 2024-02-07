@@ -9,7 +9,7 @@ services:
         limits:
           memory: 700m
     networks:
-      -tiagoveri
+      - tiagoveri
   loans:
     image: "tiagoveri/loans:v1"
     container_name: loans-ms
@@ -20,7 +20,7 @@ services:
         limits:
           memory: 700m
     networks:
-      -tiagoveri
+      - tiagoveri
   cards:
     image: "tiagoveri/cards:v1"
     container_name: cards-ms
@@ -31,7 +31,7 @@ services:
         limits:
           memory: 700m
     networks:
-      -tiagoveri
+      - tiagoveri
 networks:
   tiagoveri:
     driver: "bridge"
