@@ -30,7 +30,7 @@ services:
       service: microservice-db-config
 
   configserver:
-    image: "tiagoveri/configserver:v2"
+    image: "tiagoveri/configserver:v4"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -45,7 +45,7 @@ services:
       service: microservice-base-config
 
   accounts:
-    image: "tiagoveri/accounts:v2"
+    image: "tiagoveri/accounts:v4"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -60,7 +60,7 @@ services:
       service: microservice-configserver-config
 
   loans:
-    image: "tiagoveri/loans:v2"
+    image: "tiagoveri/loans:v4"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -75,7 +75,7 @@ services:
       service: microservice-configserver-config
 
   cards:
-    image: "tiagoveri/cards:v2"
+    image: "tiagoveri/cards:v4"
     container_name: cards-ms
     ports:
       - "9000:9000"
