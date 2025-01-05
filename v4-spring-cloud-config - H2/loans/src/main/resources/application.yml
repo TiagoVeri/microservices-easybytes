@@ -40,8 +40,16 @@ management:
   endpoint:
     shutdown:
       enabled: true
+    health:
+      probes:
+        enabled: true
   info:
     env:
+      enabled: true
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
       enabled: true
 
 #Exposes actuator shutdown URL
@@ -55,3 +63,10 @@ info:
     name: "loans"
     description: "Eazy Bank Loans Application"
     version: "1.0.0"
+
+#Allow debugging for Gateway custom filters
+logging:
+  level:
+    com:
+      eazybytes:
+        loans: DEBUG
